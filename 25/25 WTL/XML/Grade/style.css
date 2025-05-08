@@ -1,0 +1,16 @@
+TY_A{
+    display: block;
+    border: black;
+    margin:3%;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: bisque;
+}
+
+RollNo{
+    display: block;
+    font-weight: bold;
+    margin: 5px 0;
+    color: brown;
+}

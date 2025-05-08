@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<student>
+    <TY_A>
+        <RollNo>03</RollNo>
+        <Name>Kabir</Name>
+        <Marks>95</Marks>
+    </TY_A>
+
+    <TY_A>
+        <RollNo>07</RollNo>
+        <Name>Anuj</Name>
+        <Marks>97</Marks>
+    </TY_A>
+
+    <TY_A>
+        <RollNo>16</RollNo>
+        <Name>Rajvardhan</Name>
+        <Marks>99</Marks>
+    </TY_A>    
+
+</student>

@@ -1,0 +1,10 @@
+<students>
+   <student>
+      <name>John</name>
+      <grade>A</grade>
+   </student>
+   <student>
+      <name>Emma</name>
+      <grade>B</grade>
+   </student>
+</students>
