@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+ 
+</head>
+<body><center>
+    <h1>Student Registration Portal</h1>
+
+    <nav>
+        <a href="#" onclick="showForm()">Register Student</a>
+        <a href="#" onclick="showStudents()">View Registered Students</a>
+        <a herf="#" First_Year.html></a>
+    </nav>
+
+    <div id="registrationForm">
+        <h2>Register a Student</h2>
+        <form onsubmit="registerStudent(event)">
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="year">Year:</label>
+            <select id="year">
+                <option value="First Year">First Year</option>
+                <option value="Second Year">Second Year</option>
+                <option value="Third Year">Third Year</option>
+            </select>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <div id="studentsTable" style="display:none;">
+        <h2>Registered Students</h2>
+        <table>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Year</th>
+            </tr>
+            <tbody id="studentsList"></tbody>
+        </table>
+    </div>
+
+    <script>
+        function registerStudent(event) {
+            event.preventDefault();
+            
+            let studentID = document.getElementById("student-id").value;
+            let name = document.getElementById("name").value;
+            let year = document.getElementById("year").value;
+
+            let student = { studentID, name, year };
+            let students = JSON.parse(localStorage.getItem("students")) || [];
+            students.push(student);
+            localStorage.setItem("students", JSON.stringify(students));
+
+            alert("Student Registered Successfully!");
+            document.querySelector("form").reset();
+        }
+
+        function showStudents() {
+            document.getElementById("registrationForm").style.display = "none";
+            document.getElementById("studentsTable").style.display = "block";
+
+            let students = JSON.parse(localStorage.getItem("students")) || [];
+            let studentListHTML = "";
+
+            students.forEach(student => {
+                studentListHTML += `<tr>
+                    <td>${student.studentID}</td>
+                    <td>${student.name}</td>
+                    <td>${student.year}</td>
+                </tr>`;
+            });
+
+            document.getElementById("studentsList").innerHTML = studentListHTML;
+        }
+
+        function showForm() {
+            document.getElementById("registrationForm").style.display = "block";
+            document.getElementById("studentsTable").style.display = "none";
+        }
+    </script></center>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+ <book>
+ <title category="CSS">Mastering CSS</title>
+ <author>Eric Meyer</author>
+ <publisher>O'Reilly</publisher>
+ <price>250</price>
+ </book>
+ <book>
+ <title category="CSS">CSS: The Missing Manual</title>
+ <author>David Sawyer</author>
+ <publisher>O'Reilly</publisher>
+ <price>180</price>
+ </book>
+ <book>
+ <title category="JavaScript">JavaScript​: The Good Parts</title>
+ <author>Douglas Crockford</author>
+ <publisher>O'Reilly</publisher>
+ <price>300</price>
+ </book>
+ <book>
+ <title category="Python">Python Crash Course</title>
+ <author>Eric Matthes</author>
+ <publisher>No Starch Press</publisher>
+ <price>220</price>
+ </book>
+ <book>
+ <title category="Java">Effective Java</title>
+ <author>Joshua Bloch</author>
+ <publisher>Addison-Wesley</publisher>
+ <price>450</price>
+ </book>
+ <book>
+ <title category="Machine Learning">Hands-On Machine Learning</title>
+ <author>Aurelien Geron</author>
+ <publisher>O'Reilly</publisher>
+ <price>550</price>
+ </book>
+ <book>
+ <title category="Database">SQL for Beginners</title>
+ <author>John Smith</author>
+ <publisher>Pearson</publisher>
+ <price>150</price>
+ </book>
+ <book>
+ <title category="Web Development">HTML & CSS</title>
+ <author>Jon Duckett</author>
+ <publisher>Wiley</publisher>
+ <price>290</price>
+ </book>
+ <book>
+ <title category="Networking">Computer Networking</title>
+ <author>James Kurose</author>
+ <publisher>Pearson</publisher>
+ <price>500</price>
+ </book>
+ <book>
+ <title category="AI">Artificial Intelligence</title>
+ <author>Stuart Russell</author>
+ <publisher>Pearson</publisher>
+ <price>600</price>
+ </book>
+ <book>
+ <title category="Data Science">Data Science for Beginners</title>
+ <author>Andrew Ng</author>
+ <publisher>O'Reilly</publisher>
+ <price>350</price>
+ </book>
+ <book>
+ <title category="Hacking">The Web Application Hacker's Handbook</title>
+ <author>Dafydd Stuttard</author>
+ <publisher>Wiley</publisher>
+ <price>400</price>
+ </book>
+ <book>
+ <title category="Python">Fluent Python</title>
+ <author>Luciano Ramalho</author>
+ <publisher>O'Reilly</publisher>
+ <price>380</price>
+ </book>
+ <book>
+ <title category="CSS">CSS Secrets</title>
+ <author>Lea Verou</author>
+ <publisher>O'Reilly</publisher>
+ <price>270</price>
+ </book>
+ <book>
+ <title category="JavaScript">Eloquent JavaScript</title>
+ <author>Marijn Haverbeke</author>
+ <publisher>No Starch Press</publisher>
+ <price>200</price>
+ </book>
+ <book>
+ <title category="Java">Java Concurrency in Practice</title>
+ <author>Brian Goetz</author>
+ <publisher>Addison-Wesley</publisher>
+ <price>500</price>
+ </book>
+ <book>
+ <title category="Machine Learning">Deep Learning with Python</title>
+ <author>Francois Chollet</author>
+ <publisher>Manning</publisher>
+ <price>650</price>
+ </book>
+ <book>
+ <title category="Hacking">Black Hat Python</title>
+ <author>Justin Seitz</author>
+ <publisher>No Starch Press</publisher>
+ <price>320</price>
+ </book>
+ <book>
+ <title category="Web Development">JavaScript & JQuery</title>
+ <author>Jon Duckett</author>
+ <publisher>Wiley</publisher>
+ <price>280</price>
+ </book>
+ <book>
+ <title category="Networking">Network Warrior</title>
+ <author>Gary A. Donahue</author>
+ <publisher>O'Reilly</publisher>
+ <price>260</price>
+ </book>
+</library>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+ <xsl:template match="/">
+ <html>
+ <head>
+ <title>Books Titles and Authors</title>
+ </head>
+ <body>
+ <h2>Book Titles and Authors (Bullet List)</h2>
+ <ul>
+ <xsl:for-each select="library/book">
+ <li>
+ <xsl:value-of select="title"/> - <xsl:value-of select="author"/>
+ </li>
+ </xsl:for-each>
+ </ul>
+ </body>
+ </html>
+ </xsl:template>
+</xsl:stylesheet>

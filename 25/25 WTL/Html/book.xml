@@ -1,0 +1,12 @@
+<bookstore>
+ <book>
+ <title>Learning Xml</title>
+ <author>Anuj Sonwalkar</author>
+ <price>300</price>
+ </book>
+ <book>
+ <title>Advanced Xslt</title>
+ <author>Samix Jadhav</author>
+ <price>500</price>
+ </book>
+</bookstore>

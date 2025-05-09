@@ -1,0 +1,16 @@
+student{
+    background-color: #121212;
+    margin: 20%;
+}
+TYA{
+    color: white;
+    font-family: monospace;
+    font-size: 40px;
+    display: flex;
+    border: 3px solid rgb(89, 0, 255);
+    gap: 10%;
+}
+rollno{
+    color:gray;
+    margin-left: 5%;   
+}
