@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="example.xsl"?>
+<bookstore>
+    <book>
+        <title>XML for Beginners</title>
+        <author>John Doe</author>
+        <price>29.95</price>
+        <publish_date>2025-01-15</publish_date>
+    </book>
+    <book>
+        <title>Advanced XSLT</title>
+        <author>Jane Smith</author>
+        <price>49.95</price>
+        <publish_date>2024-08-25</publish_date>
+    </book>
+    <book>
+        <title>Mastering XPath</title>
+        <author>Michael Johnson</author>
+        <price>39.95</price>
+        <publish_date>2024-11-05</publish_date>
+    </book>
+</bookstore>
